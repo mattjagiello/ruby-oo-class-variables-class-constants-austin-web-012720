@@ -8,8 +8,10 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
-    return BRANDS.uniq
+    if BRANDS.include? brand
+    else
+      BRANDS << brand
+    end
   end
 
   def cobble
